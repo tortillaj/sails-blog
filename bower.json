@@ -1,0 +1,18 @@
+{
+  "name": "cejams",
+  "version": "0.0.0",
+  "authors": [
+    "jcole"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.18",
+    "restangular": "~1.4.0",
+    "angular-ui-router": "~0.2.10",
+    "angular-classy": "~0.4.2",
+    "bootstrap-sass-official": "~3.3.1"
+  }
+}
