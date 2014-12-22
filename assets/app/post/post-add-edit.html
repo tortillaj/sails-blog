@@ -1,0 +1,9 @@
+<h1>Add / Edit post</h1>
+<form name="new_post_form">
+    <div ng-repeat="(attr_name, attr_value) in model_def">
+        <label for="{{attr_name}}">{{attr_name}}</label>
+        <input type="text" ng-model="post[attr_name]" name="{{attr_name}}" />
+    </div>
+    <button ng-click="save(post)">Save post</button>
+    <button ui-sref="posts.list">Cancel</button>
+</form>

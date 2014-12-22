@@ -1,0 +1,12 @@
+<h1>Posts</h1>
+<ul>
+    <li ng-repeat="post in posts">
+        <div>
+            <p ng-repeat="(key, val) in model_def">{{key}} : {{post[key]}}</p>
+        </div>
+        <a href="" ui-sref="posts.edit({ id: post.id })">Edit</a>
+        <a href="" ng-click="remove(post)">Delete</a>
+    </li>
+</ul>
+<div ng-show="posts.length === 0">Looks like you haven't added any posts yet?</div>
+<a ng-hide="adding" ui-sref="posts.add">Add A New Post</a>

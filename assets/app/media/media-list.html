@@ -1,0 +1,12 @@
+<h1>Media</h1>
+<ul>
+    <li ng-repeat="media in media">
+        <div>
+            <p ng-repeat="(key, val) in model_def">{{key}} : {{media[key]}}</p>
+        </div>
+        <a href="" ui-sref="media.edit({ id: media.id })">Edit</a>
+        <a href="" ng-click="remove(media)">Delete</a>
+    </li>
+</ul>
+<div ng-show="media.length === 0">Looks like you haven't added any media yet?</div>
+<a ng-hide="adding" ui-sref="media.add">Add A New Media</a>

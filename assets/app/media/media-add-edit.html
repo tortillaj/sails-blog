@@ -1,0 +1,9 @@
+<h1>Add / Edit media</h1>
+<form name="new_media_form">
+    <div ng-repeat="(attr_name, attr_value) in model_def">
+        <label for="{{attr_name}}">{{attr_name}}</label>
+        <input type="text" ng-model="media[attr_name]" name="{{attr_name}}" />
+    </div>
+    <button ng-click="save(media)">Save media</button>
+    <button ui-sref="media.list">Cancel</button>
+</form>

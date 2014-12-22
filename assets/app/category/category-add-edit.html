@@ -1,0 +1,9 @@
+<h1>Add / Edit category</h1>
+<form name="new_category_form">
+    <div ng-repeat="(attr_name, attr_value) in model_def">
+        <label for="{{attr_name}}">{{attr_name}}</label>
+        <input type="text" ng-model="category[attr_name]" name="{{attr_name}}" />
+    </div>
+    <button ng-click="save(category)">Save category</button>
+    <button ui-sref="categories.list">Cancel</button>
+</form>

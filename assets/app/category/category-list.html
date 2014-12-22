@@ -1,0 +1,12 @@
+<h1>Categories</h1>
+<ul>
+    <li ng-repeat="category in categories">
+        <div>
+            <p ng-repeat="(key, val) in model_def">{{key}} : {{category[key]}}</p>
+        </div>
+        <a href="" ui-sref="categories.edit({ id: category.id })">Edit</a>
+        <a href="" ng-click="remove(category)">Delete</a>
+    </li>
+</ul>
+<div ng-show="categories.length === 0">Looks like you haven't added any categories yet?</div>
+<a ng-hide="adding" ui-sref="categories.add">Add A New Category</a>
